@@ -1,0 +1,205 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Hanken Grotesk", "sans-serif";
+  height: 100vh;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.content {
+  background-color: white;
+  border-radius: 25px;
+}
+
+@media (min-width: 768px) {
+  .content {
+    display: flex;
+    box-shadow: 5px 10px 20px hsl(241deg 100% 90.56% / 50%);
+  }
+}
+
+.result {
+  flex: 1;
+  background-image: linear-gradient(
+    to bottom,
+    /* hsl(252, 100%, 67%), */ rgb(110 74 255),
+    hsl(241, 81%, 54%)
+  );
+  text-align: center;
+  border-radius: 25px;
+  padding: 30px 40px 40px;
+}
+
+@media (max-width: 767px) {
+  .result {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.result h3 {
+  margin: 0 0 25px;
+  color: rgb(200 199 255);
+  font-weight: 600;
+}
+
+.result .score {
+  width: 170px;
+  height: 170px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+    to top,
+    rgb(36 33 202 / 3%),
+    rgb(68 45 224),
+    rgb(78 33 202)
+  );
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.result .score span {
+  display: block;
+  font-size: 60px;
+  font-weight: bold;
+  color: white;
+}
+
+.result .score p {
+  margin: 0;
+  color: rgb(255 255 255 / 30%);
+  transform: translateY(-5px);
+}
+
+.result .info h2 {
+  margin: 30px 0 15px;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.result .info p {
+  color: rgb(255 255 255 / 60%);
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+  padding: 30px 40px 40px;
+}
+
+.summary h3 {
+  margin: 0 0 25px;
+  color: rgb(48 59 90);
+  font-size: 20px;
+}
+
+.summary .stat {
+  display: flex;
+  align-items: center;
+  background-color: #3486ba;
+  padding: 12px;
+  border-radius: 10px;
+}
+
+.summary .stat:not(:last-of-type) {
+  margin-bottom: 15px;
+}
+
+.summary .reaction {
+  background-color: rgb(255 87 87 / 5%);
+}
+
+.summary .reaction p {
+  color: rgb(255 87 87);
+}
+
+.summary .memory {
+  background-color: rgb(255 176 31 / 5%);
+}
+
+.summary .memory p {
+  color: rgb(255 176 31);
+}
+
+.summary .verbal {
+  background-color: rgb(0 189 145 / 5%);
+}
+
+.summary .verbal p {
+  color: rgb(0 189 145);
+}
+
+.summary .visual {
+  background-color: rgb(17 37 212 / 5%);
+}
+
+.summary .visual p {
+  color: rgb(17 37 212);
+}
+
+.summary .stat img {
+  width: 15px;
+}
+
+.summary .stat p {
+  margin: 0 0 0 10px;
+  flex: 1;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.summary .stat .score span {
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.summary .stat .score span:first-of-type {
+  color: rgb(48 59 90);
+}
+
+.summary .stat .score span:last-of-type {
+  color: rgb(48 59 90 / 50%);
+}
+
+.summary .stat .score span:last-of-type::before {
+  content: "/";
+  margin-right: 2px;
+}
+
+.summary .cont {
+  display: block;
+  background-color: rgb(48 59 90);
+  color: white;
+  text-align: center;
+  padding: 14px 0;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+@media (max-width: 767px) {
+  .summary .cont {
+    margin-top: 25px;
+  }
+}
+
+.summary .cont:hover {
+  background-color: rgb(35 43 65);
+}
